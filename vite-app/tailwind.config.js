@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             backgroundImage: (theme) => ({
                 'paint': "url('/src/assets/paint.jpg')",
+                'stars': "url('/src/assets/stars.jpg')",
             }),
             fontFamily: {
                 cairo: ['Cairo', 'sans-serif'],
@@ -12,6 +13,7 @@ module.exports = {
         },
     },
     variants: {
+      
         extend: {},
     },
     plugins: [],

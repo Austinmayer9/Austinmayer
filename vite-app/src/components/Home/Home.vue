@@ -23,8 +23,7 @@
     <body>
         <div
             class="
-               min-h-screen
-                bg-stars bg-no-repeat bg-cover
+               min-h-screen bg-gradient-to-b from-gray-500 to-gray-900
                 font-cairo
                 text-white
             "
@@ -76,7 +75,7 @@
                              </div>
                     </div>
 
-                    <div class="card ml-5 mr-5 hover:shadow-xl grid hover:grid-cols-2">
+                    <div class="card ml-5 mr-5 hover:shadow-xl" id="card">
                         <img
                             src="src\assets\Schweitzer.jpg"
                             alt="Schweitzer Mountain"
@@ -105,7 +104,7 @@
                             <span class="block text-gray-500 text-sm pl-5"
                                 >Sandpoint, Idaho</span
                             >
-                            <div class="card_text pt-2">I love to ski the 2900 Acres of Schweitzer Mountain. Not including out of bounds. (shh...)</div>
+                            <div class="card_text pt-2" id="text">I love to ski the 2900 Acres of Schweitzer Mountain. Not including out of bounds. (shh...)</div>
                        
                         </div>
                     </div>
@@ -154,4 +153,15 @@
 </template>
 
 <script setup>
+export default {
+  mounted() {
+    const plugin = document.createElement("script");
+    plugin.setAttribute(
+      "src",
+      "\components\Home\Home.js"
+    );
+    plugin.async = true;
+    document.head.appendChild(plugin);
+  }
+};
 </script>

@@ -1,11 +1,10 @@
 <style>
 .card_text {
-  display: none;
+    display: block;
 }
-    
+
 .card:hover + .card_text {
-  display: block;
-  
+    display: block;
 }
 </style>
 
@@ -16,18 +15,20 @@
             href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
             rel="stylesheet"
         />
-
-        
     </head>
 
     <body>
         <div
             class="
-               min-h-screen bg-gradient-to-b from-gray-500 to-gray-900
+                min-h-screen
+                bg-gradient-to-b
+                from-gray-600
+                to-gray-900
                 font-cairo
                 text-white
             "
         >
+            <!--Content wrapper-->
             <div>
                 <nav>
                     <div class="text-center text-3xl">
@@ -35,14 +36,27 @@
                         <h1 class="ml-10">Mayer</h1>
                     </div>
                     <div class="text-center">
-                        <header>And a little about me...</header>
+                        <header class="border-b-2 border-gray-500">
+                            And a little about me...
+                        </header>
                     </div>
                 </nav>
 
+                <!-- Cards go here -->
 
-<!-- Cards go here -->
-
-                <div class="mt-8 grid lg:grid-cols-3 gap-10">
+                <div
+                    class="
+                        mt-8
+                        grid
+                        lg:grid-cols-3
+                        gap-10
+                        lg:gap-0
+                        lg:pl-10
+                        lg:pr-10
+                        sm:pl-7
+                        sm:pr-7
+                    "
+                >
                     <div class="card ml-5 mr-5 hover:shadow-xl">
                         <img
                             src="src\assets\City Beach.jpg"
@@ -72,7 +86,13 @@
                             <span class="block text-gray-500 text-sm pl-5"
                                 >Sandpoint, Idaho</span
                             >
-                             </div>
+
+                            <div class="card_text pt-2 pl-1" id="text">
+                                I spend the majority of my time here, enjoying
+                                the heat of the sun, swimming, and the countless
+                                games of volleyball.
+                            </div>
+                        </div>
                     </div>
 
                     <div class="card ml-5 mr-5 hover:shadow-xl" id="card">
@@ -104,11 +124,14 @@
                             <span class="block text-gray-500 text-sm pl-5"
                                 >Sandpoint, Idaho</span
                             >
-                            <div class="card_text pt-2" id="text">I love to ski the 2900 Acres of Schweitzer Mountain. Not including out of bounds. (shh...)</div>
-                       
+                            <div class="card_text pt-2 pl-1" id="text">
+                                I love to ski the 2900 Acres of Schweitzer
+                                Mountain. Not including out of bounds. (shh...)
+                                I've been skiing for about 4 years, enjoying the
+                                rush of black diamonds, and surfing pow pow.
+                            </div>
                         </div>
                     </div>
-
 
                     <div class="card ml-5 mr-5 hover:shadow-xl">
                         <img
@@ -139,29 +162,26 @@
                             <span class="block text-gray-500 text-sm pl-5"
                                 >Bellingham, Washington</span
                             >
+
+                            <div class="card_text pt-2 pl-1" id="text">
+                                Born in Blaine Washington, I loved exploring the
+                                Pacific Northwest, whether it was camping,
+                                hiking, and even dirt biking. (I think thats the
+                                term..?)
+                            </div>
                         </div>
                     </div>
                 </div>
 
-<!-- End of Cards -->
+                <!-- End of Cards -->
 
-
-
+                <div class="mt-2 border-t-2 border-gray-500">
+                    <h2>More about me</h2>
+                </div>
             </div>
         </div>
     </body>
 </template>
 
 <script setup>
-export default {
-  mounted() {
-    const plugin = document.createElement("script");
-    plugin.setAttribute(
-      "src",
-      "\components\Home\Home.js"
-    );
-    plugin.async = true;
-    document.head.appendChild(plugin);
-  }
-};
 </script>

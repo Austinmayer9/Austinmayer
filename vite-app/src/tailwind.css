@@ -5,3 +5,7 @@
 .card{
     @apply bg-white rounded overflow-hidden shadow-md relative transition  duration-300;
 }
+
+.card_text{
+    @apply lg:text-sm
+}

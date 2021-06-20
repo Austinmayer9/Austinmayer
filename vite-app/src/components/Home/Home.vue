@@ -1,9 +1,13 @@
 <style>
 .card_text {
-    display: block;
+    display: none;
 }
 
-.card:hover + .card_text {
+/* .card:hover .card_text {
+    display: block;
+} */
+
+.card:hover .card_text {
     display: block;
 }
 </style>
@@ -22,7 +26,7 @@
             class="
                 min-h-screen
                 bg-gradient-to-b
-                from-gray-600
+                from-gray-500
                 to-gray-900
                 font-cairo
                 text-white
@@ -44,11 +48,13 @@
 
                 <!-- Cards go here -->
 
+                <div class="m-4 text-2xl">Hobbies</div>
+
                 <div
                     class="
-                        mt-8
+                        mt-5
                         grid
-                        lg:grid-cols-3
+                        lg:grid-rows-1 lg:grid-cols-3
                         gap-10
                         lg:gap-0
                         lg:pl-10
@@ -57,7 +63,7 @@
                         sm:pr-7
                     "
                 >
-                    <div class="card ml-5 mr-5 hover:shadow-xl">
+                    <div class="card ml-5 mr-5 hover:shadow-xl" card:hover>
                         <img
                             src="src\assets\City Beach.jpg"
                             alt="City Beach"
@@ -86,16 +92,17 @@
                             <span class="block text-gray-500 text-sm pl-5"
                                 >Sandpoint, Idaho</span
                             >
-
-                            <div class="card_text pt-2 pl-1" id="text">
-                                I spend the majority of my time here, enjoying
-                                the heat of the sun, swimming, and the countless
-                                games of volleyball.
+                            <div class="">
+                                <div class="card_text pt-2 pl-1" id="text">
+                                    I spend the majority of my time here,
+                                    enjoying the heat of the sun, swimming, and
+                                    the countless games of volleyball.
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card ml-5 mr-5 hover:shadow-xl" id="card">
+                    <div class="card ml-5 mr-5 hover:shadow-xl" id="2">
                         <img
                             src="src\assets\Schweitzer.jpg"
                             alt="Schweitzer Mountain"
@@ -133,7 +140,7 @@
                         </div>
                     </div>
 
-                    <div class="card ml-5 mr-5 hover:shadow-xl">
+                    <div class="card ml-5 mr-5 hover:shadow-xl" id="3">
                         <img
                             src="src\assets\Lizard Lake.jpg"
                             alt="Lizard Lake"
@@ -175,13 +182,112 @@
 
                 <!-- End of Cards -->
 
-                <div class="mt-2 border-t-2 border-gray-500">
-                    <h2>More about me</h2>
+                <div class="mt-2 border-t-2 border-gray-500 text-center">
+                    <footer class="pl-3">
+                        <div class="mb-3 text-xl">Get in touch:</div>
+
+                        <!--Handles-->
+                        <div class="flex justify-center gap-5">
+                            <div>
+                                <a
+                                    class=""
+                                    href="https://www.linkedin.com/in/austin-mayer-578488215/"
+                                    >LinkedIn
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block ml-1"
+                                    >
+                                        
+                                        <path
+                                            d="M19 0H5C2.239 0 0 2.239 0 5V19C0 21.761 2.239 24 5 24H19C21.762 24 24 21.761 24 19V5C24 2.239 21.762 0 19 0ZM8 19H5V8H8V19ZM6.5 6.732C5.534 6.732 4.75 5.942 4.75 4.968C4.75 3.994 5.534 3.204 6.5 3.204C7.466 3.204 8.25 3.994 8.25 4.968C8.25 5.942 7.467 6.732 6.5 6.732ZM20 19H17V13.396C17 10.028 13 10.283 13 13.396V19H10V8H13V9.765C14.396 7.179 20 6.988 20 12.241V19Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div>
+                                <a
+                                    class=""
+                                    href="https://www.instagram.com/austin__mayer/"
+                                    >Instagram
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block ml-1"
+                                    >
+                                        <g clip-path="url(#clip0)">
+                                            <path
+                                                d="M12 2.163C15.204 2.163 15.584 2.175 16.85 2.233C20.102 2.381 21.621 3.924 21.769 7.152C21.827 8.417 21.838 8.797 21.838 12.001C21.838 15.206 21.826 15.585 21.769 16.85C21.62 20.075 20.105 21.621 16.85 21.769C15.584 21.827 15.206 21.839 12 21.839C8.796 21.839 8.416 21.827 7.151 21.769C3.891 21.62 2.38 20.07 2.232 16.849C2.174 15.584 2.162 15.205 2.162 12C2.162 8.796 2.175 8.417 2.232 7.151C2.381 3.924 3.896 2.38 7.151 2.232C8.417 2.175 8.796 2.163 12 2.163V2.163ZM12 0C8.741 0 8.333 0.014 7.053 0.072C2.695 0.272 0.273 2.69 0.073 7.052C0.014 8.333 0 8.741 0 12C0 15.259 0.014 15.668 0.072 16.948C0.272 21.306 2.69 23.728 7.052 23.928C8.333 23.986 8.741 24 12 24C15.259 24 15.668 23.986 16.948 23.928C21.302 23.728 23.73 21.31 23.927 16.948C23.986 15.668 24 15.259 24 12C24 8.741 23.986 8.333 23.928 7.053C23.732 2.699 21.311 0.273 16.949 0.073C15.668 0.014 15.259 0 12 0V0ZM12 5.838C8.597 5.838 5.838 8.597 5.838 12C5.838 15.403 8.597 18.163 12 18.163C15.403 18.163 18.162 15.404 18.162 12C18.162 8.597 15.403 5.838 12 5.838ZM12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.21 14.209 16 12 16ZM18.406 4.155C17.61 4.155 16.965 4.8 16.965 5.595C16.965 6.39 17.61 7.035 18.406 7.035C19.201 7.035 19.845 6.39 19.845 5.595C19.845 4.8 19.201 4.155 18.406 4.155Z"
+                                                fill="white"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect
+                                                    width="24"
+                                                    height="24"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div>
+                                <a
+                                    class=""
+                                    href="https://github.com/Austinmayer9"
+                                    >Github
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block ml-1"
+                                    >
+                                        <path
+                                            d="M12 0C5.374 0 0 5.373 0 12C0 17.302 3.438 21.8 8.207 23.387C8.806 23.498 9 23.126 9 22.81V20.576C5.662 21.302 4.967 19.16 4.967 19.16C4.421 17.773 3.634 17.404 3.634 17.404C2.545 16.659 3.717 16.675 3.717 16.675C4.922 16.759 5.556 17.912 5.556 17.912C6.626 19.746 8.363 19.216 9.048 18.909C9.155 18.134 9.466 17.604 9.81 17.305C7.145 17 4.343 15.971 4.343 11.374C4.343 10.063 4.812 8.993 5.579 8.153C5.455 7.85 5.044 6.629 5.696 4.977C5.696 4.977 6.704 4.655 8.997 6.207C9.954 5.941 10.98 5.808 12 5.803C13.02 5.808 14.047 5.941 15.006 6.207C17.297 4.655 18.303 4.977 18.303 4.977C18.956 6.63 18.545 7.851 18.421 8.153C19.191 8.993 19.656 10.064 19.656 11.374C19.656 15.983 16.849 16.998 14.177 17.295C14.607 17.667 15 18.397 15 19.517V22.81C15 23.129 15.192 23.504 15.801 23.386C20.566 21.797 24 17.3 24 12C24 5.373 18.627 0 12 0Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="mailto:austinmayer9@gmail.com"
+                                    >Austinmayer9@gmail.com
+                                    <svg
+                                        width="30"
+                                        height="30"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block mt-0.5"
+                                    >
+                                        <path
+                                            d="M20 6L12.5 10.5L5 6M19 16H6C4.89543 16 4 15.1046 4 14V7C4 5.89543 4.89543 5 6 5H19C20.1046 5 21 5.89543 21 7V14C21 15.1046 20.1046 16 19 16Z"
+                                            stroke="white"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        /></svg
+                                ></a>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
     </body>
 </template>
 
-<script setup>
-</script>
+<script setup></script>

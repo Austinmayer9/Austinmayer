@@ -6,6 +6,7 @@ module.exports = {
             backgroundImage: (theme) => ({
                 'paint': "url('/src/assets/paint.jpg')",
                 'stars': "url('/src/assets/stars.jpg')",
+                'tree': "url('/src/assets/Tree.jpg')",
             }),
             fontFamily: {
                 cairo: ['Cairo', 'sans-serif'],

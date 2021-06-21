@@ -3,9 +3,31 @@
 @tailwind utilities;
 
 .card{
-    @apply bg-white rounded overflow-hidden shadow-md relative transition  duration-300;
+    @apply bg-white rounded overflow-hidden shadow-md transition  duration-300;
 }
 
 .card_text{
     @apply lg:text-sm
+}
+
+.body {
+    
+    background-color: #cccccc;
+
+   }
+
+   .body::before {
+    content: "";
+    background-image: url("/src/assets/Fog1.png");
+    background-size: cover;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: .85;
+   }
+
+   .btn{
+    @apply rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider;
 }

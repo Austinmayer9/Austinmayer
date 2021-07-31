@@ -101,7 +101,7 @@
                         <p class="text-right mr-10">Web Developer, Game Enthusiast, Welder, Skiier, </p>
                         <div>
                             <img
-                                src="src\assets\pfp1.jpg"
+                                :src="pfp1"
                                 alt="Me"
                                 class="p-5 w-64 h-128"
                             />
@@ -130,7 +130,7 @@
                     >
                         <div class="card ml-5 mr-5 hover:shadow-xl" card:hover>
                             <img
-                                src="src\assets\City Beach.jpg"
+                                :src="cityBeach"
                                 alt="City Beach"
                                 class="
                                     w-full
@@ -169,7 +169,7 @@
 
                         <div class="card ml-5 mr-5 hover:shadow-xl" id="2">
                             <img
-                                src="src\assets\Schweitzer.jpg"
+                                :src="schweitzer"
                                 alt="Schweitzer Mountain"
                                 class="
                                     w-full
@@ -208,7 +208,7 @@
 
                         <div class="card ml-5 mr-5 hover:shadow-xl" id="3">
                             <img
-                                src="src\assets\Lizard Lake.jpg"
+                                :src="lizardLake"
                                 alt="Lizard Lake"
                                 class="
                                     w-full
@@ -365,4 +365,9 @@
     </body>
 </template>
 
-<script setup></script>
+<script setup>
+    import pfp1 from '../../assets/pfp1.jpg';
+    import cityBeach from '../../assets/City Beach.jpg';
+    import schweitzer from '../../assets/Schweitzer.jpg';
+    import lizardLake from '../../assets/Lizard Lake.jpg';
+</script>

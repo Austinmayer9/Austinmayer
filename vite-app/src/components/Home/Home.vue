@@ -25,7 +25,7 @@
         <div class="font-cairo text-black">
             <!--Content wrapper-->
             <div class="">
-                <div class="relative body min-h-screen">
+                <div class="flex relative body min-h-screen">
                     <div class="relative">
                         <nav class="flex">
                             <div class="">
@@ -42,40 +42,52 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="absolute right-0 mt-10">
-                                
-                                <a
-                                    href="#"
-                                    class="
-                                    
-                                        text-right
-                                        mr-10
-                                        mt-10
-                                        ml-10
-                                        btn
-                                        text-black
-                                        border-black
-                                        border-2
-                                        hover:bg-black
-                                        hover:text-white
-                                        transition
-                                        ease-out
-                                        duration-500
-                                    "
-                                    >Contact</a
-                                >
-                            </div>
                         </nav>
                     </div>
 
-                    <!-- <div class="absolute">
-                        "Exploring life one adventure at a time"
-                    </div> -->
+                    <div class="absolute right-0 mt-10">
+                        <a
+                            href="#"
+                            class="
+                                text-right
+                                mr-10
+                                mt-10
+                                ml-10
+                                btn
+                                text-black
+                                border-black border-2
+                                hover:bg-black
+                                hover:text-white
+                                transition
+                                ease-out
+                                duration-500
+                            "
+                            >Contact</a
+                        >
+                    </div>
+
+                    <div
+                        class="
+                            text-3xl
+                            font-cairo
+                            text-white
+                            absolute
+                            flex
+                            items-center
+                            justify-center
+                            text-center
+                            w-full
+                            h-full
+                            pl-10
+                            pr-10
+                        "
+                    >
+                        "Set your mind on things that are above... Not on things
+                        that are on Earth. Colossians 3:2"
+                    </div>
 
                     <div class="absolute left-1/2 bottom-5">
-                    <div class="text-white">
-                        
-                    </div>
+                        <div class="text-white"></div>
                         <svg
                             width="30"
                             height="30"
@@ -96,24 +108,27 @@
 
                 <!--About me-->
                 <div class="relative bg-white text-black">
+                    <!-- Me section -->
                     <div class="">
-                        <h1 class="text-3xl ml-5 pt-5">Me</h1>
-                        <p class="text-right mr-10">Web Developer, Game Enthusiast, Welder, Skiier, </p>
-                        <div>
-                            <img
-                                :src="pfp1"
-                                alt="Me"
-                                class="p-5 w-64 h-128"
-                            />
-                            
-                        </div>
+                        <h1 class="text-3xl ml-5 pt-5"></h1>
 
-                        
+                        <div class="flex">
+                            <div>
+                                <img
+                                    :src="pfp1"
+                                    alt="Me"
+                                    class="p-5 w-64 h-128"
+                                />
+                            </div>
+                            <p class="text-xl p-10 justify-center self-center text-center w-full">
+                                If you couldn't tell already, my name is Austin Mayer. I love coding, programming, and anything that involves numbers. I built this site from scratch to give a sneak peek of my front-end capabilities. 
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Cards go here -->
 
-                    <div class="m-4 text-2xl">Hobbies</div>
+                    <div class="m-4 text-3xl text-center">Hobbies</div>
 
                     <div
                         class="
@@ -366,8 +381,8 @@
 </template>
 
 <script setup>
-    import pfp1 from '../../assets/pfp1.jpg';
-    import cityBeach from '../../assets/City Beach.jpg';
-    import schweitzer from '../../assets/Schweitzer.jpg';
-    import lizardLake from '../../assets/Lizard Lake.jpg';
+import pfp1 from '../../assets/pfp1.jpg'
+import cityBeach from '../../assets/City Beach.jpg'
+import schweitzer from '../../assets/Schweitzer.jpg'
+import lizardLake from '../../assets/Lizard Lake.jpg'
 </script>

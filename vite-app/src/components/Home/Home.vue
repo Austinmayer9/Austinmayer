@@ -25,7 +25,7 @@
         <div class="font-cairo text-black">
             <!--Content wrapper-->
             <div class="">
-                <div class="flex relative body min-h-screen">
+                <div class="flex relative body h-screen">
                     <div class="relative">
                         <nav class="flex">
                             <div class="">
@@ -45,6 +45,25 @@
                         </nav>
                     </div>
 
+                    <div class="absolute right-20 mt-10">
+                        <a
+                            href="#"
+                            class="
+                                text-right
+                                mr-10
+                                
+                                ml-10
+                                btn
+                                text-black
+                                hover:text-white
+                                transition
+                                ease-out
+                                duration-500
+                            "
+                            >Videography</a
+                        >
+                    </div>
+
                     <div class="absolute right-0 mt-10">
                         <a
                             href="#"
@@ -58,6 +77,7 @@
                                 border-black border-2
                                 hover:bg-black
                                 hover:text-white
+                                
                                 transition
                                 ease-out
                                 duration-500
@@ -83,10 +103,12 @@
                         "
                     >
                         "Set your mind on things that are above... Not on things
-                        that are on Earth. Colossians 3:2"
+                        that are on Earth." Colossians 3:2
                     </div>
 
-                    <div class="absolute left-1/2 bottom-5">
+                    <!-- Scroll arrow -->
+                    
+                    <div class="absolute flex items-center justify-center w-full bottom-10">
                         <div class="text-white"></div>
                         <svg
                             width="30"
@@ -110,17 +132,17 @@
                 <div class="relative bg-white text-black">
                     <!-- Me section -->
                     <div class="">
-                        <h1 class="text-3xl ml-5 pt-5"></h1>
+                        <h1 class="text-3xl ml-5"></h1>
 
                         <div class="flex">
                             <div>
                                 <img
                                     :src="pfp1"
                                     alt="Me"
-                                    class="p-5 w-64 h-128"
+                                    class="ml-1 p-5 w-64 h-128"
                                 />
                             </div>
-                            <p class="text-xl p-10 justify-center self-center text-center w-full">
+                            <p class="lg:text-xl lg:p-10 md:text-lg md:p-8 sm:p-4 justify-center self-center text-center w-full">
                                 If you couldn't tell already, my name is Austin Mayer. I love coding, programming, and anything that involves numbers. I built this site from scratch to give a sneak peek of my front-end capabilities. 
                             </p>
                         </div>

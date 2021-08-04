@@ -49,11 +49,10 @@
                         <a
                             href="#"
                             class="
+                                btn
                                 text-right
                                 mr-10
-                                
                                 ml-10
-                                btn
                                 text-black
                                 hover:text-white
                                 transition
@@ -68,16 +67,15 @@
                         <a
                             href="#"
                             class="
+                                btn
                                 text-right
                                 mr-10
                                 mt-10
                                 ml-10
-                                btn
                                 text-black
                                 border-black border-2
                                 hover:bg-black
                                 hover:text-white
-                                
                                 transition
                                 ease-out
                                 duration-500

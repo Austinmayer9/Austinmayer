@@ -5,6 +5,18 @@
     opacity: 0;
 }
 
+.btn {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.menu {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 .card:hover .card_text {
     transition: 1000ms ease;
     opacity: 1;
@@ -169,7 +181,7 @@
                                     >
                                 </div>
 
-                                <div class="menu btn">
+                                <div class="menu btn outline-none">
                                     <a href="#" class="menu_text">Menu</a>
 
                                     <ul class="menu_items gap-5">
@@ -358,9 +370,7 @@
                                 >
                                 <div class="">
                                     <div class="card_text">
-                                        I spend the majority of my time here,
-                                        enjoying the heat of the sun, swimming,
-                                        and the countless games of volleyball.
+                                        I spend the majority of my time here playing volleyball, tennis, and floating around the lake.
                                     </div>
                                 </div>
                             </div>
@@ -401,11 +411,7 @@
                                     >Sandpoint, Idaho</span
                                 >
                                 <div class="card_text">
-                                    I love to ski the 2900 Acres of Schweitzer
-                                    Mountain. Not including out of bounds.
-                                    (shh...) I've been skiing for about 4 years,
-                                    enjoying the rush of black diamonds, and
-                                    surfing pow pow.
+                                    Skiing is definitely my favorite sport. There's nothing like tree skiing in 2 feet of pow pow.
                                 </div>
                             </div>
                         </div>
@@ -446,10 +452,7 @@
                                 >
 
                                 <div class="card_text">
-                                    Born in Blaine Washington, I loved exploring
-                                    the Pacific Northwest, whether it was
-                                    camping, hiking, and even dirt biking. (I
-                                    think thats the term..?)
+                                    Hiking, biking, and dirt biking sum up the rest of my time in the summer. I took this picture in my hometown while hiking with friends.
                                 </div>
                             </div>
                         </div>
@@ -468,7 +471,6 @@
                                     justify-center
                                     self-center
                                      gap-5
-                                    
                                     border-t-2 border-black
                                     pt-2
                                     pb-1
@@ -477,9 +479,9 @@
                                 <div></div>
                                 <div>
                                     <a
-                                        class=""
+                                        class="a"
                                         href="https://www.linkedin.com/in/austin-mayer-578488215/"
-                                        ><div class="hidden sm:inline-block">LinkedIn
+                                        ><div class="hidden sm:inline-block transform transition duration-500 hover:text-green-500 hover:scale-110">LinkedIn
                                             </div> 
                                         <svg
                                             width="24"
@@ -492,6 +494,7 @@
                                             <path
                                                 d="M19 0H5C2.239 0 0 2.239 0 5V19C0 21.761 2.239 24 5 24H19C21.762 24 24 21.761 24 19V5C24 2.239 21.762 0 19 0ZM8 19H5V8H8V19ZM6.5 6.732C5.534 6.732 4.75 5.942 4.75 4.968C4.75 3.994 5.534 3.204 6.5 3.204C7.466 3.204 8.25 3.994 8.25 4.968C8.25 5.942 7.467 6.732 6.5 6.732ZM20 19H17V13.396C17 10.028 13 10.283 13 13.396V19H10V8H13V9.765C14.396 7.179 20 6.988 20 12.241V19Z"
                                                 fill="black"
+                                                
                                             />
                                         </svg>
                                     </a>
@@ -499,9 +502,9 @@
 
                                 <div>
                                     <a
-                                        class=""
+                                        class="a"
                                         href="https://www.instagram.com/austin__mayer/"
-                                        ><div class="hidden sm:inline-block">Instagram
+                                        ><div class="hidden sm:inline-block transform transition duration-500 hover:text-green-500 hover:scale-110">Instagram
                                             </div>
                                         <svg
                                             width="20"
@@ -532,9 +535,9 @@
 
                                 <div>
                                     <a
-                                        class=""
+                                        class="a"
                                         href="https://github.com/Austinmayer9"
-                                        ><div class="hidden sm:inline-block">Github
+                                        ><div class="hidden sm:inline-block transform transition duration-500 hover:text-green-500 hover:scale-110">Github
                                             </div>
                                         <svg
                                             width="24"
@@ -552,9 +555,9 @@
                                     </a>
                                 </div>
 
-                                <div class="pr-1">
+                                <div class="a pr-1">
                                     <a href="mailto:austinmayer9@gmail.com"
-                                        ><div class="hidden sm:inline-block">Gmail
+                                        ><div class="hidden sm:inline-block transform transition duration-500 hover:text-green-500 hover:scale-110">Gmail
                                             </div>
                                         <svg
                                             width="30"

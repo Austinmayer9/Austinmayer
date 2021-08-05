@@ -1,34 +1,88 @@
 <style>
 .card_text {
-    display: none;
+    transition: 500ms ease;
+    height: 0;
+    opacity: 0;
 }
 
 .card:hover .card_text {
-
-    display: block;
+    transition: 1000ms ease;
+    opacity: 1;
 }
 
+.card:hover .card_text {
+}
 
 .menu_items {
     display: none;
 }
 
 .menu:hover .menu_items {
-   transition: 200ms ease;
+    transition: 200ms ease;
     display: flex;
 }
 
 .menu:hover .menu_items {
- transform: scale(1);
+    transform: scale(1);
 }
 
 .menu:hover {
- transform: scale(1);
+    transform: scale(1);
 }
-
 
 .menu:hover .menu_text {
     display: none;
+}
+
+.name:hover .name1 {
+    --tw-text-opacity: 1;
+    color: rgba(16, 185, 129, var(--tw-text-opacity));
+}
+
+.name:hover .name2 {
+    --tw-text-opacity: 1;
+    color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+#group1 {
+    animation: fadeInUp 2s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#bible g {
+    opacity: 0;
+    animation: dropIn 8s ease forwards;
+    animation-delay: calc(var(--order) * 600ms);
+}
+
+@keyframes dropIn {
+    20% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    30%,
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bible1 {
+    --order: 1;
+}
+
+.bible2 {
+    --order: 2;
 }
 </style>
 
@@ -47,17 +101,38 @@
             <div class="">
                 <div class="flex flex-col body h-screen">
                     <div class="">
-                        <nav class="z-10 relative">
+                        <nav class="z-10 relative" id="group1">
                             <div class="flex h-full">
                                 <div class="name">
                                     <div>
-                                        <h1 class="text-4xl mr-10 pt-2">
+                                        <h1
+                                            class="
+                                                text-4xl
+                                                mr-10
+                                                pt-2
+                                                transition
+                                                ease-out
+                                                duration-500
+                                                name1
+                                            "
+                                        >
                                             Austin
                                         </h1>
                                     </div>
 
-                                    <div class="">
-                                        <h1 class="text-4xl ml-10 text-green-500">Mayer</h1>
+                                    <div class="text-green-500">
+                                        <h1
+                                            class="
+                                                text-4xl
+                                                ml-10
+                                                transition
+                                                ease-out
+                                                duration-500
+                                                name2
+                                            "
+                                        >
+                                            Mayer
+                                        </h1>
                                     </div>
                                 </div>
 
@@ -96,15 +171,21 @@
 
                                 <div class="menu btn">
                                     <a href="#" class="menu_text">Menu</a>
-                                    
+
                                     <ul class="menu_items gap-5">
                                         <li>
-                                            <a href="https://austinmayer9.github.io/videography" class="hover:text-green-500"
+                                            <a
+                                                href="https://austinmayer9.github.io/videography"
+                                                class="hover:text-green-500"
                                                 >Videography</a
                                             >
                                         </li>
                                         <li>
-                                            <a href="#" class="hover:text-green-500">Contact</a>
+                                            <a
+                                                href="#"
+                                                class="hover:text-green-500"
+                                                >Contact</a
+                                            >
                                         </li>
                                     </ul>
                                 </div>
@@ -112,7 +193,7 @@
                         </nav>
                     </div>
 
-                    <div
+                    <g id="bible" 
                         class="
                             z-5
                             absolute
@@ -127,18 +208,27 @@
                             w-full
                             pl-10
                             pr-10
+                            
                         "
+                        
                     >
-                        "Set your mind on things that are above... Not on things
-                        that are on Earth." Colossians 3:2
-                    </div>
+                        <g class="bible1" id="bible1">
+"Set your mind on things that are above... Not on things
+                        that are on Earth." 
+                        <g class="bible2 ml-2" id="bible2">
+                            Colossians 3:2
+                        </g>
+                        </g>
+                        
+                        
+                    </g>
 
                     <!-- Scroll arrow -->
 
                     <div
                         class="
                             absolute
-                            flex 
+                            flex
                             items-center
                             justify-center
                             w-full
@@ -172,11 +262,11 @@
                         <h1 class="text-3xl ml-5"></h1>
 
                         <div class="flex">
-                            <div>
+                            <div class="">
                                 <img
                                     :src="pfp1"
                                     alt="Me"
-                                    class="p-5 w-64 h-128"
+                                    class="p-5 w-64 h-128 rounded overflow-hidden"
                                 />
                             </div>
                             <p
@@ -191,13 +281,26 @@
                                     text-center
                                     w-full
                                     mr-5
+                                    bg-green-500
+                                    rounded
+                                    text-white
+                                    hover:shadow-2xl
+                                    transform
+                                    hover:translate-x-1
+                                    hover:-translate-y-1
+                                    transition
+                                    duration-500
+                                    ease-out
                                 "
                             >
+                               <div class="p-2">
                                 If you couldn't tell already, my name is Austin
                                 Mayer. I love coding, programming, and anything
                                 that involves numbers. I built this site from
                                 scratch to give a sneak peek of my front-end
                                 capabilities.
+                               </div>
+                                
                             </p>
                         </div>
                     </div>
@@ -219,7 +322,7 @@
                             sm:pr-7
                         "
                     >
-                        <div class="card ml-5 mr-5 hover:shadow-xl" id="1">
+                        <div class="card group" id="1">
                             <img
                                 :src="cityBeach"
                                 alt="City Beach"
@@ -230,7 +333,12 @@
                                     object-cover object-bottom
                                 "
                             />
-                            <div class="m-3 text-black">
+                            <div class="p-3 text-black bg-white 
+                                    transform
+                                    group-hover:-translate-y-20
+                                    transition
+                                    duration-500
+                                    ease-out">
                                 <span class="font-bold"
                                     ><svg
                                         class="w-5 inline-block mb-2 pr-1"
@@ -249,7 +357,7 @@
                                     >Sandpoint, Idaho</span
                                 >
                                 <div class="">
-                                    <div class="card_text pt-2 pl-1">
+                                    <div class="card_text">
                                         I spend the majority of my time here,
                                         enjoying the heat of the sun, swimming,
                                         and the countless games of volleyball.
@@ -258,7 +366,7 @@
                             </div>
                         </div>
 
-                        <div class="card ml-5 mr-5 hover:shadow-xl" id="2">
+                        <div class="card group" id="2">
                             <img
                                 :src="schweitzer"
                                 alt="Schweitzer Mountain"
@@ -269,7 +377,12 @@
                                     object-cover object-bottom
                                 "
                             />
-                            <div class="m-3 text-black">
+                            <div class="p-3 text-black bg-white 
+                                    transform
+                                    group-hover:-translate-y-20
+                                    transition
+                                    duration-500
+                                    ease-out">
                                 <span class="font-bold"
                                     ><svg
                                         class="w-5 inline-block mb-2 pr-1"
@@ -287,7 +400,7 @@
                                 <span class="block text-gray-500 text-sm pl-5"
                                     >Sandpoint, Idaho</span
                                 >
-                                <div class="card_text pt-2 pl-1">
+                                <div class="card_text">
                                     I love to ski the 2900 Acres of Schweitzer
                                     Mountain. Not including out of bounds.
                                     (shh...) I've been skiing for about 4 years,
@@ -297,7 +410,7 @@
                             </div>
                         </div>
 
-                        <div class="card ml-5 mr-5 hover:shadow-xl" id="3">
+                        <div class="card group" id="3">
                             <img
                                 :src="lizardLake"
                                 alt="Lizard Lake"
@@ -308,7 +421,12 @@
                                     object-cover object-center
                                 "
                             />
-                            <div class="m-3 text-black">
+                            <div class="p-3 text-black bg-white 
+                                    transform
+                                    group-hover:-translate-y-20
+                                    transition
+                                    duration-500
+                                    ease-out">
                                 <span class="font-bold"
                                     ><svg
                                         class="w-5 inline-block mb-2 pr-1"
@@ -327,7 +445,7 @@
                                     >Bellingham, Washington</span
                                 >
 
-                                <div class="card_text pt-2 pl-1">
+                                <div class="card_text">
                                     Born in Blaine Washington, I loved exploring
                                     the Pacific Northwest, whether it was
                                     camping, hiking, and even dirt biking. (I
@@ -349,8 +467,8 @@
                                     flex
                                     justify-center
                                     self-center
-                                    gap-2
-                                    md:gap-5
+                                     gap-5
+                                    
                                     border-t-2 border-black
                                     pt-2
                                     pb-1
@@ -361,7 +479,8 @@
                                     <a
                                         class=""
                                         href="https://www.linkedin.com/in/austin-mayer-578488215/"
-                                        >LinkedIn
+                                        ><div class="hidden sm:inline-block">LinkedIn
+                                            </div> 
                                         <svg
                                             width="24"
                                             height="24"
@@ -382,7 +501,8 @@
                                     <a
                                         class=""
                                         href="https://www.instagram.com/austin__mayer/"
-                                        >Instagram
+                                        ><div class="hidden sm:inline-block">Instagram
+                                            </div>
                                         <svg
                                             width="20"
                                             height="20"
@@ -414,7 +534,8 @@
                                     <a
                                         class=""
                                         href="https://github.com/Austinmayer9"
-                                        >Github
+                                        ><div class="hidden sm:inline-block">Github
+                                            </div>
                                         <svg
                                             width="24"
                                             height="24"
@@ -433,7 +554,8 @@
 
                                 <div class="pr-1">
                                     <a href="mailto:austinmayer9@gmail.com"
-                                        >Gmail
+                                        ><div class="hidden sm:inline-block">Gmail
+                                            </div>
                                         <svg
                                             width="30"
                                             height="30"

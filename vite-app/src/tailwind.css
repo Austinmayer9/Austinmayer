@@ -3,12 +3,14 @@
 @tailwind utilities;
 
 .card {
-    @apply bg-white rounded overflow-hidden shadow-md transition  duration-300;
+    @apply bg-white rounded overflow-hidden shadow-md transform transition duration-300 ml-5 mr-5 hover:shadow-xl hover:translate-x-1 hover:-translate-y-1;
 }
 
 .card_text {
-    @apply lg:text-sm;
+    @apply lg:text-sm pt-3 pl-1;
 }
+
+
 
 .body {
     background-color: #cccccc;

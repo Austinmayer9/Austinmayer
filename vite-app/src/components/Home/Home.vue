@@ -1,101 +1,5 @@
 <style>
-.card_text {
-    transition: 500ms ease;
-    height: 0;
-    opacity: 0;
-}
-
-.btn {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.menu {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.a {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.card:hover .card_text {
-    transition: 1000ms ease;
-    opacity: 1;
-}
-
-.card:hover .card_text {
-}
-
-.menu_items {
-    display: none;
-}
-
-.menu:hover .menu_items {
-    transition: 200ms ease;
-    display: flex;
-}
-
-.menu:hover .menu_items {
-    transform: scale(1);
-}
-
-.menu:hover {
-    transform: scale(1);
-}
-
-.menu:hover .menu_text {
-    display: none;
-}
-
-.name:hover .name1 {
-    --tw-text-opacity: 1;
-    color: rgba(16, 185, 129, var(--tw-text-opacity));
-}
-
-.name:hover .name2 {
-    --tw-text-opacity: 1;
-    color: rgba(0, 0, 0, var(--tw-text-opacity));
-}
-
-#group1 {
-    animation: fadeInUp 2s;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20%);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#bible g {
-    opacity: 0;
-    animation: dropIn 8s ease forwards;
-    animation-delay: calc(var(--order) * 600ms);
-}
-
-@keyframes dropIn {
-    20% {
-        opacity: 0;
-        transform: translateY(-20%);
-    }
-    30%,
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.bible1 {
-    --order: 1;
-}
-
-.bible2 {
-    --order: 2;
-}
+@import './Home.css';
 </style>
 
 <template>
@@ -163,7 +67,7 @@
                                     >
                                 </div>
 
-                                <div class="self-center mr-10 hidden sm:block">
+                                <div class="group self-center mr-10 hidden sm:block">
                                     <a
                                         href="#"
                                         class="
@@ -179,6 +83,25 @@
                                         "
                                         >Contact</a
                                     >
+                                    <div class="absolute contact_menu hover:text-green-500">
+                                        <ul class="">
+                                            <li class="flex-inline"><a href="mailto:austinmayer9@gmail.com">Gmail</a><svg
+                                            width="30"
+                                            height="30"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="inline-flex"
+                                        >
+                                            <path
+                                                d="M20 6L12.5 10.5L5 6M19 16H6C4.89543 16 4 15.1046 4 14V7C4 5.89543 4.89543 5 6 5H19C20.1046 5 21 5.89543 21 7V14C21 15.1046 20.1046 16 19 16Z"
+                                                stroke="black"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            /></svg
+                                    ></li>
+                                        </ul>
+                                    </div>
                                 </div>
 
                                 <div class="menu btn outline-none">

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '/src/components/Home/Home.vue'
 import About from '/src/components/About/About.vue'
 import Videography from '/src/components/Videography/Videography.vue'
+import Contact from '/src/components/Contact/Contact.vue'
 
 const routes = [
     {
@@ -27,6 +28,15 @@ const routes = [
 
         component: Videography,
     },
+
+    // {
+    //     path: '/contact',
+
+    //     name: 'Contact',
+
+    //     component: Contact,
+    // },
+
 
 ]
 

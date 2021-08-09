@@ -1,0 +1,119 @@
+.card_text {
+    transition: 500ms ease;
+    height: 0;
+    opacity: 0;
+}
+
+.btn {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.menu {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.card:hover .card_text {
+    transition: 1000ms ease;
+    opacity: 1;
+}
+
+.contact_menu{
+    opacity: 0;
+}
+
+.contact_btn:hover .contact_menu{
+    transition: 1000ms ease;
+    opacity: 1;
+}
+
+.menu_items {
+    display: none;
+}
+
+.menu:hover .menu_items {
+    transition: 200ms ease;
+    display: flex;
+}
+
+.menu:hover .menu_items {
+    transform: scale(1);
+}
+
+.menu:hover {
+    transform: scale(1);
+}
+
+.menu:hover .menu_text {
+    display: none;
+}
+
+.name:hover .name1 {
+    --tw-text-opacity: 1;
+    color: rgba(16, 185, 129, var(--tw-text-opacity));
+}
+
+.name:hover .name2 {
+    --tw-text-opacity: 1;
+    color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+#group1 {
+    animation: fadeInUp 2s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#bible g {
+    opacity: 0;
+    animation: dropIn 8s ease forwards;
+    animation-delay: calc(var(--order) * 600ms);
+}
+
+@keyframes dropIn {
+    20% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    30%,
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bible1 {
+    --order: 1;
+}
+
+.bible2 {
+    --order: 2;
+}
+
+
+
+.contact_btn {
+    @apply self-center
+    text-black
+    border-black border-2
+    hover:bg-green-500
+    hover:border-green-500
+    hover:text-white
+    rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider outline-none
+}
+
+.contact_menu {
+    @apply mt-5 bg-white rounded-lg pt-1 pb-0.5 pr-1.5 pl-2 transition duration-500 group-hover:opacity-100
+}

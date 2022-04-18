@@ -18,7 +18,7 @@
 
 .body::before {
     content: '';
-    background-image: url('/src/assets/Fog1.png');
+    background-image: url('/src/assets/Sigma VSCO-min.jpg');
     background-size: cover;
     position: fixed;
     top: 0px;

@@ -15,7 +15,7 @@
         <div class="font-cairo text-black">
             <!--Content wrapper-->
             <div class="">
-                <div class="flex flex-col body h-screen">
+                <div class="flex flex-col body bg-Sigma h-screen">
                     <div class="">
                         <nav class="z-10 relative" id="group1">
                             <div class="flex h-full">
@@ -115,12 +115,31 @@
                                                 >Videography</a
                                             >
                                         </li>
-                                        <li>
+                                        <li class="group">
                                             <a
                                                 href="#"
                                                 class="hover:text-green-500"
                                                 >Contact</a
                                             >
+                                            <div class="absolute contact_menu hover:text-green-500">
+                                        <ul>
+                                            <li class="flex-inline"><a href="mailto:austinmayer9@gmail.com">Gmail</a><svg
+                                            width="30"
+                                            height="30"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="inline-flex"
+                                        >
+                                            <path
+                                                d="M20 6L12.5 10.5L5 6M19 16H6C4.89543 16 4 15.1046 4 14V7C4 5.89543 4.89543 5 6 5H19C20.1046 5 21 5.89543 21 7V14C21 15.1046 20.1046 16 19 16Z"
+                                                stroke="black"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            /></svg
+                                    ></li>
+                                        </ul>
+                                    </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -197,13 +216,7 @@
                         <h1 class="text-3xl ml-5"></h1>
 
                         <div class="flex">
-                            <div class="">
-                                <img
-                                    :src="pfp1"
-                                    alt="Me"
-                                    class="p-5 w-64 h-128 rounded overflow-hidden"
-                                />
-                            </div>
+
                             <p
                                 class="
                                     lg:text-xl
@@ -216,6 +229,8 @@
                                     text-center
                                     w-full
                                     mr-5
+                                    ml-5
+                                    mt-5
                                     bg-green-500
                                     rounded
                                     text-white
@@ -227,8 +242,9 @@
                                     duration-500
                                     ease-out
                                 "
+                                
                             >
-                               <div class="p-2">
+                               <div class="p-2 mr-5 ml-5 mt-5 absolute text-white text-center">
                                 If you couldn't tell already, my name is Austin
                                 Mayer. I love coding, programming, and anything
                                 that involves numbers. I built this site from
